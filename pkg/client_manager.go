@@ -54,7 +54,7 @@ func PutFile(c context.Context, api S3PutObjectAPI, input *s3.PutObjectInput) (*
 
 //CreateClient create a s3 client
 func CreateClient() *s3.Client {
-	mycredentials := credentials.NewStaticCredentialsProvider("AKIAZ2T6W6PH5VMT6Q6E", "JBqeNvpBJvnjPQCtkRJ7Q1oP4izZzarutgZahqq7", "")
+	mycredentials := credentials.NewStaticCredentialsProvider("key_id", "access_key", "")
 	cfg, err := config.LoadDefaultConfig(context.TODO(),
 		config.WithRegion("us-west-1"),
 		config.WithCredentialsProvider(mycredentials),
